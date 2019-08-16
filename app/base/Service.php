@@ -6,7 +6,7 @@ class Service extends \Base {
     
     public function checkService($service_id)
     {
-        $sql = "SELECT count(*) FROM services WHERE id = sid"; 
+        $sql = "SELECT count(*) FROM services WHERE id = ?sid"; 
         
         $query = \Query::instance ($sql,[
             'sid' => (int) $service_id,
